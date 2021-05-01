@@ -9,9 +9,9 @@ def observed():
 
 def remove_observations(observations):
   print("Do you wish to remove an observation (yes/no)?")
-  response =input() 
+    response = input()
 
-  if (response == "yes"):
+    if (response == "yes"):
       print("Please enter the observation you wish to remove")
       observation = input()
       observations.remove(observation)
