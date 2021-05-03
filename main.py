@@ -1,23 +1,24 @@
-def observed():
-  observations = []
+def short_pattern():
+  pattern = {"sequence":"101", "occurrences":5}
+  return pattern
 
-  for count in range(5):
-    print("Please enter an observation:")
-    observations.append(input())
+def medium_pattern():
+  pattern = {"sequence":"111000", "occurrences":25}
+  return pattern
 
-  return observations
-
-def remove_observations(observations):
-  print("Do you wish to remove an observation (yes/no)?")
-  response =input() 
-
-  if (response == "yes"):
-      print("Please enter the observation you wish to remove")
-      observation = input()
-      observations.remove(observation)
+def long_pattern():
+  pattern = {"sequence":"1100110011001100", "occurrences":50}
+  return pattern
 
 def run():
-  observations = observed()
-  remove_observations(observations)
+  print("Analysing patterns...")
+  patterns = {
+    "short sequence":short_pattern(),
+    "medium sequence":medium_pattern(),
+    "long sequence":long_pattern()
+  }
+  
+  for key, value in patterns.items():
+    print(f"{key}: {value}")
 
-observations_set = set()
+run()
